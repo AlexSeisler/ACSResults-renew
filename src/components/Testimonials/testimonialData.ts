@@ -14,10 +14,10 @@ export const testimonials = [
     company: "Education Institute"
   },
   {
-    text: "Working with ACS Results transformed our online presence. Their attention to detail and innovative approach to web development sets them apart.",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a",
-    name: "Michael Anderson",
-    role: "Business Director",
+    text: "ACS Results provided our students with a professional way to showcase their skills and career readiness. It’s a valuable bridge between classroom learning and real-world opportunities.",
+    image: "/content/images/Spencer.png",
+    name: "Spencer Harper",
+    role: "Software Coach",
     company: "Digital Solutions Inc."
   }
 ];
