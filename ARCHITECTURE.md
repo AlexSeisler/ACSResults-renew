@@ -31,37 +31,39 @@ Student Resume / Media Upload
 
 ---
 
-## 🧩 Components  
+## 🧩 Components
 
-- **Landing Page (`index.html`)**  
-  - Marketing site → value proposition, student demos, pricing tiers, lead capture (AI assistant).  
+### Landing Page (React SPA)
+- Value proposition, testimonials, pricing tiers, portfolio demos.
 
-- **Main Template (`/Main-Template/`)**  
-  - Base portfolio design → projects, skills, certifications, and contact info.  
-  - Reused + customized per student.  
+### Testimonials (`/src/components/Testimonials/`)
+- Academic + industry validation  
+- Includes: Ashraful, James Marcus, Dr. Laughner, Spencer Harper  
 
-- **Student Portfolios (`/Kaleb-Portfolio/`, `/Alexander-Thomas-Portfolio/`, `/Christian-Portfolio/`)**  
-  - Real builds delivered to students.  
-  - Example: *Kaleb (Welding)* → showcased welding projects, OSHA certification, skill progress bars.  
+### Pricing (`/src/components/Pricing/`)
+- Recruiter-facing price tiers  
+- Real links to case study flows  
 
-- **Assets (`/images/`, `/bootstrapThemes/`)**  
-  - Shared resources → logos, Bootstrap CSS themes, icons.  
+### Student Portfolios (`/src/components/StudentPortfolios/`)
+- Modernized student showcase cards  
+- Replaces static HTML templates  
 
-- **Payment Flow (`/payment/`)**  
-  - Simple checkout interface for purchasing portfolio tiers.  
-  - Not a full payment processor — served as proof of pricing structure.  
+### Onboarding Form (`/src/components/Onboarding/OnboardingForm.tsx`)
+- Demo intake flow  
+- Backed by a **stubbed `form.ts` utility** (no external DB)  
 
-- **AI Agent (Voiceflow Integration)**  
-  - Embedded assistant for answering FAQs + capturing leads.  
+### Assets (`/public/`)
+- Static resources (logos, screenshots, posters)  
 
 ---
 
-## 📊 Architecture Notes  
+## 📊 Architecture Notes
 
-- **Lightweight by design** → no backend database; forms + manual builds ensured fast MVP delivery.  
-- **Manual Build Process** → validated student demand before scaling into **ACS Results AI** automation.  
-- **Hosting & Deployment** → Netlify static hosting for landing + portfolios.  
-- **Data Handling** → only resumes + public project media collected; no sensitive personal data stored.  
+- **Modernized Frontend** → React + Vite replaces static HTML/Bootstrap  
+- **Removed Backend Dependency** → Supabase integration removed for simplicity; replaced with a stub for recruiter demo  
+- **Hosting & Deployment** → Netlify build pipeline (`npm run build`, publish `dist/`)  
+- **Data Handling** → Only demo data included; no sensitive or personal student data stored in repo  
+- **Recruiter Lens** → Repo cleaned of scaffolding, `.bolt/` removed, `.env` sanitized, docs updated  
 
 ---
 

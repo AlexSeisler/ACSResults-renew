@@ -12,10 +12,7 @@ It also served as a **business funnel**, leading to my **first paid client (Roug
 ## 🌐 Live Demo  
 
 - **Landing Page:** [https://acsresults.netlify.app](https://acsresults.netlify.app)  
-- **Example Student Portfolios:**  
-  - [Kaleb – Welding Portfolio](./Kaleb-Portfolio/)  
-  - [Alexander – Trade Portfolio](./Alexander-Thomas-Portfolio/)  
-  - [Christian – Portfolio](./Christian-Portfolio/)  
+
 - **Repo Owner:** [Alex Seisler](https://github.com/AlexSeisler)  
 
 ---
@@ -47,14 +44,14 @@ It also served as a **business funnel**, leading to my **first paid client (Roug
 ## 🛠 Tech Stack  
 
 **Frontend**  
-- HTML5 + Bootstrap (Bootswatch theme)  
-- Vanilla JS (interactivity, modals, carousels)  
-- CSS (custom styling)  
+- React 18 + TypeScript  
+- Vite (build system)  
+- Tailwind CSS + shadcn/ui components  
+- lucide-react (icons)  
 
 **Infrastructure**  
-- Hosting: Netlify  
-- Intake: Google Forms (resume + project submissions)  
-- AI Agent: Voiceflow (lead capture + inquiries)  
+- Hosting: Netlify (CI/CD from GitHub)  
+- Forms: Stubbed local handler (Supabase removed for recruiter-facing build)  
 - Distribution: QR codes + poster campaign  
 
 ---
@@ -63,25 +60,25 @@ It also served as a **business funnel**, leading to my **first paid client (Roug
 
 ```text
 ACS-Results/
-├── index.html                 # Main landing page
-├── Alexander-Thomas-Portfolio/ # Example student portfolio
-├── Christian-Portfolio/       # Example student portfolio
-├── Kaleb-Portfolio/           # Welding portfolio (featured demo)
-├── Main-Template/             # Base portfolio template
-├── Template-Alex/             # Variant template (Alex)
-├── Template-Kaleb/            # Variant template (Kaleb)
-├── bootstrapThemes/           # Bootswatch CSS theme
-├── images/                    # Shared image assets
-├── payment/                   # Pricing + purchase flow
-├── ARTIFACTS/                 # Posters, screenshots, form workflow (to be added)
-├── BUSINESS_PLAN/             # Business plan PDFs (to be added)
+├── public/                   # Static assets
+├── src/
+│   ├── components/
+│   │   ├── Testimonials/     # Recruiter-facing validation
+│   │   ├── Pricing/          # Pricing + purchase flow
+│   │   ├── StudentPortfolios/# Student portfolio cards
+│   │   └── Onboarding/       # Stubbed form flow
+│   ├── lib/                  # Utilities (form.ts stubbed)
+│   ├── types/                # Shared TypeScript types
+│   └── App.tsx               # Root component
+├── netlify.toml              # Netlify build config
+├── package.json
+├── ARCHITECTURE.md
 └── README.md
 ```
 
 ## 📖 Additional Documentation  
 
 - [ARCHITECTURE.md](./ARCHITECTURE.md) → System design and data flow  
-- [SECURITY.md](./SECURITY.md) → Student data handling + safety notes  
 - [BUSINESS_PLAN/](./BUSINESS_PLAN/) → Business plan PDFs and supporting documents  
 - [ARTIFACTS/](./ARTIFACTS/) → Campaign Posters
 
